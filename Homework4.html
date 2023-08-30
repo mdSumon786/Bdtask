@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en,ban">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Homework4.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Homework4</title>
+</head>
+<body>
+    <div>
+        <table align="center">
+            <thead>
+                <tr>
+                    <th width="150"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="inbill" >
+                <tr>
+                    <td>ডিস্টিবিউটর :</td>
+                    <td> :- <select name="" id="op">
+                        <option value="" selected>--Seleect--</option>
+                        <option value="DPDC">DPDC</option>
+                        <option value="DESCO">DESCO</option>
+                        <option value="BPDB">BPDB</option>
+                        <option value="PALLI">Palli Bidyut</option>
+                        <option value="">Other</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>মোট ইউনিট =</td>
+                    <td><input id="invalue" type="text"><b>kWH/Unit</b></td>
+                </tr>
+                <tr>
+                    <td>ডিমান্ড লোড =</td>
+                    <td><input id="dvalue" type="text"><b>kW</b></td>
+                </tr>
+                <tr><td align="center"><button id="btn" onclick="pay()">Click To Calculate Bill</button></td></tr>
+            </tbody>
+            <tbody id="bill">
+                <tr>
+                    <td>ইলেকট্রিক বিল=</td>
+                    <td><input id="ebill" type="text" readonly ><b>TK</b></td>
+                </tr>
+                <tr>
+                    <td>ডিমান্ড চার্জ =</td>
+                    <td><input type="text" readonly><b>TK</b></td>
+                </tr>
+                <tr>
+                    <td>ভ্যাট =</td>
+                    <td><input id="vat" type="text" value="5" placeholder="5%"><b>%</b></td>
+                </tr>
+                <tr>
+                    <td>মোট বিল =</td>
+                    <td><input type="text" id="total" readonly><b>TK</b></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="dt_Desco">
+            <h1 >DESCO Electricity Bill</h1>
+            <p >Tariff(>600): 100 x 13.26 = 1326.00 tk</p>
+            <p >Tariff(401-600): 200 x 11.51 = 2302.00 tk</p>
+            <p >Tariff(301-400): 100 x 7.34 = 734.00 tk</p>
+            <p >Tariff(201-300): 100 x 6.95 = 695.00 tk</p>
+            <p >Tariff(76-200): 125 x 6.63 = 828.75 tk</p>
+            <p >Tariff(51-75): 75 x 4.85 = 363.75 tk</p>
+        </div>
+        <div id="dt_Dpdc">
+            <h1 >DPDC Electricity Bill</h1>
+            <p >Tariff(>600): 100 x 11.46 = 1146.00 tk</p>
+            <p >Tariff(401-600): 200 x 9.94 = 1988.00 tk</p>
+            <p >Tariff(301-400): 100 x 6.34 = 634.00 tk</p>
+            <p >Tariff(201-300): 100 x 6.00 = 600.00 tk</p>
+            <p >Tariff(76-200): 125 x 5.72 = 715.00 tk</p>
+            <p >Tariff(0-75): 75 x 4.4.19 = 314.25 tk</p>
+        </div>
+        <div id="dt_Bpdp">
+            <h1 >BPDB Electricity Bill</h1>
+            <p >Tariff(>600): 100 x 12.63 = 1263.00 tk</p>
+            <p >Tariff(401-600): 200 x 10.96 = 2192.00 tk</p>
+            <p >Tariff(301-400): 100 x 6.99 = 699.00 tk</p>
+            <p >Tariff(201-300): 100 x 6.62 = 662.00 tk</p>
+            <p >Tariff(76-200): 125 x 6.31 = 788.75 tk</p>
+            <p >Tariff(0-75): 75 x 4.62 = 346.5 tk</p>
+        </div>
+        <div id="dt_Polli">
+            <h1 >Palli Bidyut Bill</h1>
+            <p >Tariff(>600): 100 x 12.03 = 1203.00 tk</p>
+            <p >Tariff(401-600): 200 x 10.44 = 2088.00 tk</p>
+            <p >Tariff(301-400): 100 x 6.66 = 666.00 tk</p>
+            <p >Tariff(201-300): 100 x 6.30 = 630.00 tk</p>
+            <p >Tariff(76-200): 125 x 6.01 = 751.25 tk</p>
+            <p >Tariff(0-75): 75 x 4.40 = 330.00 tk</p>
+        </div>
+    </div>
+
+
+    <script src="Homework4.js">
+    
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+#inbill{
+    font-weight: bold;
+    font-size: 20px;
+}
+#bill{
+    font-weight: bold;
+    font-size: 18px;
+}
+#dt_Dpdc,#dt_Desco{
+    color: green;
+    text-align: center;
+    display: none;
+}
+#dt_Bpdp,#dt_Polli{
+    color: green;
+    text-align: center;
+    display: none;
+}
