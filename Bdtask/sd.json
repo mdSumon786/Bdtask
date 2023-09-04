@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "Md Rofiqul islam sumon",
+        "roll" : "440301",
+        "department": "CMT",
+        "sesion" : "19-20"
+    },
+    {
+        "name" : "Md Habibur Rahman",
+        "roll" : "440260",
+        "department": "CMT",
+        "sesion" : "19-20"
+    },
+    {
+        "name" : "Md Rofiqul islam",
+        "roll" : "440302",
+        "department": "CMT",
+        "sesion" : "19-20"
+    },
+    {
+        "name" : "Md Rakib",
+        "roll" : "440303",
+        "department": "CMT",
+        "sesion" : "19-20"
+    }
+]
