@@ -1,4 +1,7 @@
-<?php include "header.php"; 
+<?php include "header.php";
+if($_SESSION["user_role"]=='0'){
+    header('Refresh: 0.01; URL = post.php');
+  } 
  if(isset($_POST['save'])){
     include "config.php";
 

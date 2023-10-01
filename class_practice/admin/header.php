@@ -1,3 +1,11 @@
+<?php 
+include "config.php";
+session_start();
+if(!isset( $_SESSION["username"])){
+    header('Refresh: 0.01; URL = Login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,11 +30,23 @@
                 <div class="row">
                     <!-- LOGO -->
                     <div class="col-md-2">
-                        <a href="post.php"><img class="logo" src="images/news.jpg"></a>
+                    <?php 
+                        include "config.php";
+                        $sql = "SELECT * FROM `setting`";
+                                $result = mysqli_query($conn,$sql) or die("Query faild");
+                                if(mysqli_num_rows($result)>0){
+                                    while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                        <a href="../index.php"><img class="logo" src="images/<?php echo $row['logo'] ?>"></a>
+                        <?php 
+                            }
+                        }
+                        ?>
                     </div>
                     <!-- /LOGO -->
                       <!-- LOGO-Out -->
-                    <div class="col-md-offset-9  col-md-1">
+                    <div class="col-md-offset-9  col-md-3">
+                        <span>Wellcome- <?php echo $_SESSION["username"] ?></span>
                         <a href="logout.php" class="admin-logout" >logout</a>
                     </div>
                     <!-- /LOGO-Out -->
@@ -40,15 +60,26 @@
                 <div class="row">
                     <div class="col-md-12">
                        <ul class="admin-menu">
+                            <li><a href="<?php echo $localhost ?>">Home</a><li>
                             <li>
                                 <a href="post.php">Post</a>
                             </li>
+                            
+                            <?php
+                            if($_SESSION["user_role"]=='1'){
+
+                            
+                            ?>
                             <li>
                                 <a href="category.php">Category</a>
                             </li>
                             <li>
                                 <a href="users.php">Users</a>
                             </li>
+                            <li>
+                                <a href="settings.php">Setting</a>
+                            </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
